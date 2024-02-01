@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-5 offset-5">
+            <div class="card" style="width: 24rem;">
+                <div class="card-body">
+                <h5>title</h5>
+                    <h5 class="card-title">{{ form.title }}</h5>
+                <h6>Content</h6>
+                <p class="card-text">{{ form.content }}</p>
+                <button type="submit">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+
+

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Cards</h1>
+
+{% for post in object_list %}
+<ol class="list-group ">
+    <a type="button" class="list-group-item list-group-item-action" href="{% url "detail" post.pk %}">{{ post.title }}</a>
+</ol>
+{% endfor %}
+
+{% endblock content %}
